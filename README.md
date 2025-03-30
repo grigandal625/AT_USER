@@ -3,7 +3,7 @@
 
 ## Локальное разворачивание
 
-1. `git clone https://github.com/grigandal625/AT_USER`
+1. `git clone https://github.com/grigandal625/AT_USER` и `cd AT_USER`
 
 2. Установить Docker
 3. Установить и запустить RabbtMQ, лучше запускать в Docker командой 
@@ -21,7 +21,7 @@ docker run --name at_rabbitmq -d --expose 5672 -p 5672:5672 -p 15672:15672 rabbi
 
 8. `chmod +x ./alembic_upgrade_head.sh`
 9.  `./alembic_upgrade_head.sh`
-10. Если нигде больше не запущен пакет `at_queue`, выполнить `poetry run python -m at_queue` (запустится только если запущен RabbitMQ)
+10. Если нигде больше не запущен пакет `at_queue`, выполнить в отдельном терминале в этой же директории `poetry run python -m at_queue` (запустится только если запущен RabbitMQ)
 11. `make components`
 
 После этогозапустится сервер для авторизации пользователей по адресу http://127.0.0.1:8181 или по адресу http://0.0.0.0:8181 (если не меняли порт в .env)
