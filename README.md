@@ -1,6 +1,8 @@
 # AT_USER
 Микросервис пользователей AT-ТЕХНОЛОГИЯ
 
+## Локальное разворачивание
+
 1. `git clone https://github.com/grigandal625/AT_USER`
 
 2. Установить Docker
